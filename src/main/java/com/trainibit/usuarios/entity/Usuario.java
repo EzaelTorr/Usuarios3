@@ -46,4 +46,8 @@ public class Usuario extends AuditableRecord {
 
     @Column (name = "uuid")
     private UUID uuid;
+
+    @Column(name = "nombre_planeta", nullable = false)
+    private String nombrePlaneta;
+
 }

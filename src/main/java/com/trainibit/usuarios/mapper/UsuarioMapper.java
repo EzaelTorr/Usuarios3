@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.UUID;
 public class UsuarioMapper {
 
-
+//codigo para mostrar el usuario como usuariorespnse
     public static UsuarioResponse mapEntityToDto(Usuario usuario) {
 
         UsuarioResponse usuarioResponse = new UsuarioResponse();
@@ -33,15 +33,22 @@ public class UsuarioMapper {
         return usuarioResponses;
 
     }
-    public static UsuarioRequest mapRequestToEntity(UsuarioRequest usuarioRequest) {
+    //còdigo para obtener el còdigo de usuario a usuarioRequest
+    public static Usuario mapRequestToEntity(UsuarioRequest usuarioRequest) {
+        // Crear una nueva instancia de Usuario
+        Usuario usuario = new Usuario();
 
-        Usuario  usuario = new Usuario();
-        usuario.setName(usuario.getName());
-        usuario.setLastName(usuario.getLastName());
-        usuario.setBirthDate(usuario.getBirthDate());
-        usuario.setEmail(usuario.getEmail());
-        usuario.setPassword(usuario.getPassword());
-        usuario.setUuid(UUID.randomUUID());
-        return usuarioRequest;
+        // Mapear los datos de UsuarioRequest a Usuario
+        usuario.setName(usuarioRequest.getName());
+        usuario.setLastName(usuarioRequest.getLastName());
+        usuario.setBirthDate(usuarioRequest.getBirthDate());
+        usuario.setEmail(usuarioRequest.getEmail());
+        usuario.setPassword(usuarioRequest.getPassword());
+        usuario.setUuid(UUID.randomUUID()); // Asignar un UUID aleatorio
+       // usuario.setNombrePlaneta(usuarioRequest.getNombreDePlaneta()); // Usar el nombre de planeta del request
+
+        // Retornar el usuario mapeado
+        return usuario;
     }
+
 }

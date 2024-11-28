@@ -12,6 +12,7 @@ public class UsuarioRequest {
     private String password;
     private LocalDate birthDate;
     private int edad;
+    private String NombreDePlaneta;
 
 
 

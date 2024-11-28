@@ -25,10 +25,10 @@ public class UsuarioController {
     @Autowired
     private UsuarioService usuarioService;
 
-    /*@GetMapping
-    //public ResponseEntity<List<UsuarioResponse>> getUsuario() {
+    @GetMapping
+    public ResponseEntity<List<UsuarioResponse>> getUsuario() {
         return ResponseEntity.ok(usuarioService.findAll());
-    }*/
+    }
 
     @GetMapping("{id}") //Permite realizar la busqueda por ID
     public Usuario obtenerUsuarioPorId(@PathVariable UUID id) {

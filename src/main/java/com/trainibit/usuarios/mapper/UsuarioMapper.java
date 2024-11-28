@@ -45,7 +45,7 @@ public class UsuarioMapper {
         usuario.setEmail(usuarioRequest.getEmail());
         usuario.setPassword(usuarioRequest.getPassword());
         usuario.setUuid(UUID.randomUUID()); // Asignar un UUID aleatorio
-       // usuario.setNombrePlaneta(usuarioRequest.getNombreDePlaneta()); // Usar el nombre de planeta del request
+        usuario.setNombrePlaneta(usuarioRequest.getNombreDePlaneta()); // Usar el nombre de planeta del request
 
         // Retornar el usuario mapeado
         return usuario;
